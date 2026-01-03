@@ -6,7 +6,7 @@ class DotfilesSetup < Formula
   homepage "https://github.com/tekierz/dotfiles"
   url "https://github.com/tekierz/dotfiles/archive/refs/heads/main.tar.gz"
   version "1.0.0"
-  sha256 "bfaf4107b29d916448b999a9e70c5e8edeeaba79251145ffcdb8d15dd45a6124"
+  sha256 "d61fcdfd4538f8e7f02d1d92641aa20e1025a20e19888226c5783ed63bf06557"
   license "MIT"
   head "https://github.com/tekierz/dotfiles.git", branch: "main"
 
