@@ -5,8 +5,8 @@ class Sshh < Formula
   desc "Quick SSH connection manager with interactive menu"
   homepage "https://github.com/tekierz/sshh"
   url "https://github.com/tekierz/sshh/archive/refs/heads/main.tar.gz"
-  version "1.0.1"
-  sha256 "b5c39333f95f274e3bb1353cd40c86c52b817c11380578714544408c91ee5563"
+  version "1.1.0"
+  sha256 "3ec717fc16877f3e545f8418d6a3290695eaab43b06479a628f3f47f18b8b5a0"
   license "MIT"
   head "https://github.com/tekierz/sshh.git", branch: "main"
 
