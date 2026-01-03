@@ -6,7 +6,7 @@ class Sshh < Formula
   homepage "https://github.com/tekierz/sshh"
   url "https://github.com/tekierz/sshh/archive/refs/heads/main.tar.gz"
   version "1.1.0"
-  sha256 "3ec717fc16877f3e545f8418d6a3290695eaab43b06479a628f3f47f18b8b5a0"
+  sha256 "60c0dcc56a612e72f568d03155ab2d19441cf40b7d9429b61e970b1aef8f968e"
   license "MIT"
   head "https://github.com/tekierz/sshh.git", branch: "main"
 
