@@ -4,12 +4,11 @@
 class DotfilesSetup < Formula
   desc "Cross-platform terminal environment setup with 13 customizable themes"
   homepage "https://github.com/tekierz/dotfiles"
+  url "https://github.com/tekierz/dotfiles/archive/refs/heads/main.tar.gz"
+  version "1.0.0"
+  sha256 "bfaf4107b29d916448b999a9e70c5e8edeeaba79251145ffcdb8d15dd45a6124"
   license "MIT"
   head "https://github.com/tekierz/dotfiles.git", branch: "main"
-
-  # Versioned release (update SHA when creating releases)
-  # url "https://github.com/tekierz/dotfiles/archive/refs/tags/v1.0.0.tar.gz"
-  # sha256 "REPLACE_WITH_ACTUAL_SHA256"
 
   def install
     bin.install "bin/dotfiles-setup"

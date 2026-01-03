@@ -4,12 +4,11 @@
 class Sshh < Formula
   desc "Quick SSH connection manager with interactive menu"
   homepage "https://github.com/tekierz/sshh"
+  url "https://github.com/tekierz/sshh/archive/refs/heads/main.tar.gz"
+  version "1.0.1"
+  sha256 "b5c39333f95f274e3bb1353cd40c86c52b817c11380578714544408c91ee5563"
   license "MIT"
   head "https://github.com/tekierz/sshh.git", branch: "main"
-
-  # Versioned release (update SHA when creating releases)
-  # url "https://github.com/tekierz/sshh/archive/refs/tags/v1.0.1.tar.gz"
-  # sha256 "REPLACE_WITH_ACTUAL_SHA256"
 
   def install
     bin.install "bin/sshh"
