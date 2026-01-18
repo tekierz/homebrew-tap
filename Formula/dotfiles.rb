@@ -6,7 +6,7 @@ class Dotfiles < Formula
   desc "Cross-platform terminal environment management TUI"
   homepage "https://github.com/tekierz/dotfiles"
   url "https://github.com/tekierz/dotfiles/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "PLACEHOLDER_UPDATE_AFTER_TAGGING"
+  sha256 "6b0991db618e24402a14029ef13e9db71a9a9d8d69313f1fa73de7b6d9d6986d"
   license "MIT"
   head "https://github.com/tekierz/dotfiles.git", branch: "main"
 
