@@ -5,9 +5,8 @@
 class Dotfiles < Formula
   desc "Cross-platform terminal environment management TUI"
   homepage "https://github.com/tekierz/dotfiles"
-  url "https://github.com/tekierz/dotfiles/archive/refs/heads/feature/interactive-tui.tar.gz"
-  version "2.0.1"
-  sha256 "PLACEHOLDER_SHA256_REPLACE_AFTER_MERGE"
+  url "https://github.com/tekierz/dotfiles/archive/refs/tags/v2.0.1.tar.gz"
+  sha256 "PLACEHOLDER_UPDATE_AFTER_TAGGING"
   license "MIT"
   head "https://github.com/tekierz/dotfiles.git", branch: "main"
 
