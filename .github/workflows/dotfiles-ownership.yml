@@ -1,0 +1,35 @@
+name: Dotfiles ownership regression
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  ownership:
+    name: Preserve unrelated legacy executables
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          persist-credentials: false
+
+      - name: Install isolated test dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends ruby ruby-minitest
+
+      - name: Check Ruby syntax
+        run: |
+          ruby -c Formula/dotfiles.rb
+          ruby -c test/dotfiles_ownership_test.rb
+
+      - name: Verify ownership preservation without installing packages
+        run: ruby test/dotfiles_ownership_test.rb
+
+      - name: Check patch whitespace
+        run: git show --format= --check HEAD
