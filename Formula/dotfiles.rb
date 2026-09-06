@@ -13,16 +13,8 @@ class Dotfiles < Formula
   depends_on "go" => :build
 
   def install
-    # Clean up old binaries from previous installations
-    old_binaries = ["dotfiles-tui", "dotfiles-setup"]
-    old_binaries.each do |old_bin|
-      old_path = HOMEBREW_PREFIX/"bin"/old_bin
-      if old_path.exist?
-        ohai "Removing old binary: #{old_bin}"
-        old_path.unlink
-      end
-    end
-
+    # Homebrew owns this formula's keg. Legacy executables require a separate
+    # ownership review; never remove an arbitrary prefix/bin entry here.
     system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version}"), "./cmd/dotfiles"
   end
 
@@ -37,7 +29,7 @@ class Dotfiles < Formula
         dotfiles hotkeys      # View keybindings cheatsheet
         dotfiles update       # Check for package updates
         dotfiles status       # Show current configuration
-        dotfiles theme --list # List available themes
+        dotfiles theme list # List available themes
         dotfiles backups      # List configuration backups
         dotfiles restore <n>  # Restore a backup
 
@@ -50,7 +42,8 @@ class Dotfiles < Formula
         - Batch package updates
 
       Note: This replaces the legacy dotfiles-setup and dotfiles-tui packages.
-      If you had either installed, they have been automatically cleaned up.
+      Existing legacy executables are preserved. Review their ownership before
+      removing them; use brew uninstall for a legacy formula you still have installed.
     EOS
   end
 
