@@ -29,7 +29,7 @@ class Dotfiles < Formula
         dotfiles hotkeys      # View keybindings cheatsheet
         dotfiles update       # Check for package updates
         dotfiles status       # Show current configuration
-        dotfiles theme --list # List available themes
+        dotfiles theme list # List available themes
         dotfiles backups      # List configuration backups
         dotfiles restore <n>  # Restore a backup
 
