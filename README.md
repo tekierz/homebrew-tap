@@ -64,7 +64,7 @@ sshh         # Connect
 
 ## Migration from Legacy Packages
 
-If you previously had `dotfiles-setup` or `dotfiles-tui` installed, the new unified `dotfiles` formula will automatically clean them up during installation.
+The `dotfiles` formula preserves existing `dotfiles-setup` and `dotfiles-tui` executables. Review their ownership before removing them. If a legacy Homebrew formula is installed, remove it through Homebrew so its own keg is unlinked safely.
 
 ```bash
 # Uninstall old packages (if installed)
